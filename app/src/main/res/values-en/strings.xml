@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Bar Bill Management</string>
+    <string name="hintCamarero">Waiter name</string>
+    <string name="hintTotal">Total bill (€)</string>
+    <string name="chPropina">Include tip</string>
+    <string name="tvPropina_porcentaje">Tip percentage: %d%%</string>
+    <string name="labelMetodo_pago">Payment method:</string>
+    <string name="rbEfectivo">Cash</string>
+    <string name="rbTarjeta">Credit Card</string>
+    <string name="labelCalificacion">Service rating:</string>
+    <string name="botonCalcular">Calculate Total</string>
+
+    <!--Error Messages-->
+    <string name="cuenta_nula">Error: Bill total is required.</string>
+    <string name="cuenta_invalida">Error: Invalid number format.</string>
+    <string name="cuenta_negativa">Error: Bill total must be greater than 0.</string>
+
+    <!--Array for AutoCompleteTextView-->
+    <string-array name="lista_camareros">
+        <item>Charles</item>
+        <item>Carmen</item>
+        <item>Caroline</item>
+        <item>Daniel</item>
+        <item>David</item>
+        <item>Elena</item>
+    </string-array>
+</resources>

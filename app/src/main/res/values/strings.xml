@@ -1,3 +1,27 @@
 <resources>
-    <string name="app_name">CuentaBar</string>
+    <string name="app_name">Gestión Cuenta Bar</string>
+    <string name="hintCamarero">Nombre del camarero</string>
+    <string name="hintTotal">Total de la cuenta (€)</string>
+    <string name="chPropina">Incluir propina</string>
+    <string name="tvPropina_porcentaje">Porcentaje de propina: %d%%</string>
+    <string name="labelMetodo_pago">Método de pago:</string>
+    <string name="rbEfectivo">Efectivo</string>
+    <string name="rbTarjeta">Tarjeta</string>
+    <string name="labelCalificacion">Calificación del servicio:</string>
+    <string name="botonCalcular">Calcular Total</string>
+
+    <!--Mensajes de Error-->
+    <string name="cuenta_nula">Error: Falta introducir el valor de la cuenta.</string>
+    <string name="cuenta_invalida">Error: El valor introducido no es un número válido.</string>
+    <string name="cuenta_negativa">Error: La cuenta debe ser mayor que 0.</string>
+
+    <!--Array para el AutoCompleteTextView-->
+    <string-array name="lista_camareros">
+        <item>Carlos</item>
+        <item>Carmen</item>
+        <item>Carolina</item>
+        <item>Daniel</item>
+        <item>David</item>
+        <item>Elena</item>
+    </string-array>
 </resources>
