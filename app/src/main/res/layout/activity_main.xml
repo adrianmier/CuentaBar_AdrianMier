@@ -1,19 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!--LAYOUT-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="14dp"
     tools:context=".MainActivity">
 
+    <!--ELEMENTOS DE TEXTO CAMARERO Y CUENTA-->
+
+    <AutoCompleteTextView
+        android:id="@+id/actCamarero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hintCamarero"
+        android:completionThreshold="3"/>
+
+    <EditText
+        android:id="@+id/etTotal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/hintTotal"
+        android:inputType="numberDecimal"/>
+
+    <!--ELEMENTOS PARA LA PROPINA-->
+
+    <CheckBox
+        android:id="@+id/chPropina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chPropina"/>
+
     <TextView
+        android:id="@+id/tvPropina_porcentaje"
+        android:text="@string/tvPropina_porcentaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <SeekBar
+        android:id="@+id/sbPropina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="35"
+        android:progress="10"/>
+
+    <!--METODO DE PAGO-->
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/labelMetodo_pago"/>
+
+    <RadioGroup
+        android:id="@+id/rgMetodo_pago"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbEfectivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbEfectivo"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rbTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbTarjeta"/>
+
+    </RadioGroup>
+
+    <!--CALIFICACIÓN, BOTON DE CALCULAR Y RESULTADO-->
+
+    <TextView
+        android:id="@+id/labelCalificacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/labelCalificacion"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RatingBar
+        android:id="@+id/rbCalificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5"/>
+
+    <Button
+        android:id="@+id/botonCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/botonCalcular"/>
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+
+
+</LinearLayout>
